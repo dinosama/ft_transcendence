@@ -1,0 +1,745 @@
+@font-face {
+  font-family: 'Beautifully Delicious Sans';
+  src:  url('../fonts/BDSans-Regular.woff2') format('woff2'),
+        url('../fonts/BDSans-Bold.woff2') format('woff2'),
+        url('../fonts/BDSans-Thin.woff2') format('woff2'),
+        url('../fonts/BDSans-Black.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -----------------  GENERAL PAGE -----------------  */
+#app {
+  font-family: "Beautifully Delicious Sans";
+  background-color: #020B13;
+}
+
+#main-div {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+#title, #title-set, #title-tourn, #title-log, #title-signin {
+  -webkit-text-stroke: 1px #FF853B;
+  text-align: center;
+  font-weight: bold;
+  color: #FF853B;
+  font-size: 44px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+#register-submit-form-div {
+  text-align: center;
+  border: 3px dashed white;
+  margin-left: 30%;
+  margin-right: 30%;
+  max-width: 800px;
+  min-width: 207px;
+  margin-bottom: 4vh;
+  padding: 2vh;
+
+  display: grid;
+  place-items: center;
+}
+
+#form-error {
+  color: red;
+}
+
+#form-validate {
+  color: green;
+}
+
+#button-next {
+  -webkit-text-stroke: 1px #FF853B;
+  font-weight: bold;
+  color: #FF853B;
+  font-size: 25px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  background-color: transparent;
+  border: 0px solid;
+  height: 20px;
+  width: 160px;
+  color: #CCC;
+}
+
+/* ----------------- HOME PAGE -----------------  */
+#main-div-home {
+  height: 100vh;
+  flex-direction: column; 
+}
+
+#div-home {
+  padding: 80px;
+}
+
+#home-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#title-home {
+  text-align: center;
+  -webkit-text-stroke: 2px #FF853B;
+  font-weight: bold;
+  color: #FF853B;
+  font-size: 8vh;
+}
+
+
+/* ----------------- SIGNUP PAGE -----------------  */
+.div-signup-field {
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  padding:25px;
+}
+
+#countdown {
+  text-align: center;
+  color: white;
+}
+
+
+/* ----------------- LOGIN PAGE ----------------- */
+.div-login-field {
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+#subtitle-login {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 2vh;
+}
+
+#real-form-login {
+  text-align: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  border: 3px dashed white;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: 250px;
+}
+
+/* ----------------- PRE-MATCH-TOURNAMENT PAGE ----------------- */
+.pre-match-tournament-div-field {
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+#pre-match-tournament-subtitle {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 2vh;
+}
+
+#pre-match-tournament-form {
+  text-align: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  border: 3px dashed white;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: 250px;
+}
+
+/* ----------------- GAME WINNER TOURNAMENT ----------------------*/
+#tournament-hash {
+  font-size: 24px;
+  color: white;
+}
+
+/* ----------------- SHARED ----------------------*/
+::placeholder {
+  color: #FF853B;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.game-history-logo {
+  width: 30px;
+  height: auto;
+}
+
+.link-profile {
+  color: #FF853B;
+  text-decoration: none;
+}
+
+.default-banner {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	background-color: #FF853B;
+	color: #020B13;
+	padding: 5px 20px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.settings-us-btn {
+  padding-top: 20px;
+}
+
+input {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+  height: 25px;
+  width: 200px;
+  color: #CCC;
+  text-align: center;
+  
+}
+
+div > a {
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 30px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#vertical-line {
+  border-left: 5px dashed white ;
+  height: 40vh;
+}
+
+.center {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.menu-central-main-div {
+	height: 510px;
+  margin-bottom: 10px;
+}
+
+.btn-image {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  width: 100px;
+  height: 90px;
+}
+
+.btn-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* ----------------- 2FA PAGE ----------------- */
+#subtitle-2fa {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 2vh;
+}
+
+#div-input-code {
+  text-align: center;
+}
+
+#input-code {
+  border-bottom: 2px solid;
+  margin-bottom: 40px;
+}
+
+/* ----------------- DASHBOARD PAGE ----------------- */
+#dashboard-find-friends {
+  text-align: center;
+}
+
+#dashboard-username-text {
+	color: #FF853B;
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+#dashboard-score-historic-text {
+  color: white;
+  font-size: 25px;
+}
+
+#dashboard-friendship-div {
+	border: 3px dashed white;
+	text-align: center;
+	min-width: 250px;
+	width: 500px;
+}
+
+.dashboard-general-button {
+	height: 30px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #FF853B;
+	color: #020B13;
+	padding: 5px 20px;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.dashboard-friend-name-text {
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#dashboard-friend-list {
+	overflow: auto;
+}
+
+.dashboard-friend-text {
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#dashboard-play-div {
+	border-top: 3px dashed white;
+	border-bottom: 3px dashed white;
+	min-width: 600px;
+	text-align: center;
+}
+
+#dashboard-play-button-div {
+	align-items: center;
+	margin-top: 15px;
+  max-width: 800px;
+  width: 600px;
+  min-width: 400px;
+}
+
+.dashboard-play-button {
+	height: 40px;
+	width: 160px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px; 
+	background-color: #FF853B;
+	color: #020B13;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#dashboard-game-historic-div {
+	border: 3px dashed white;
+	text-align: center;
+  width: 500px;
+}
+
+#dashboard-subtitle-match-history {
+	margin-left: 10px;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+}
+
+#dashboard-profile-picture {
+  margin-left: 60px;
+  margin-top: 20px;
+  height: 150px;
+  width: 150px;
+}
+
+.settings-us-btn {
+  padding-top: 5px;
+}
+
+/* ----------------- DASHBOARD ANIMATION ----------------- */
+#field {
+  margin: auto;
+  margin-top: 50px;
+  width: 270px;
+  height: 200px;
+  position: relative;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: #f8640d;
+  border-color: #020B13;
+}
+
+#field #field-net {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 3px;
+  border-style: dotted;
+  border-color: #020B13;
+}
+
+#field #field-ping,
+#field #field-pong {
+  width: 4px;
+  height: 25px;
+  position: absolute;
+  background: #020B13;
+}
+
+#field #field-ping {
+  left: 6%;
+  animation: field-ping 6s infinite linear;
+}
+
+#field #field-pong {
+  right: 6%;
+  animation: field-pong 6s infinite linear;
+}
+
+#field #field-ball {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background: #020B13;
+  animation: field-ball 6s infinite linear;
+}
+
+@keyframes field-ball {
+  0% {
+	  top: 34%;
+	  left: 52%;
+  }
+  8.3% {
+	  top: 52%;
+  	left: 90%;
+  }
+  24.9% {
+  	top: 85%;
+  	left: 8%;
+  }
+  30% {
+	  top: 98%;
+  	left: 27%;
+  }
+  41.5% {
+	  top: 70%;
+	  left: 90%;
+  }
+  58.1% {
+  	top: 55%;
+  	left: 8%;
+  }
+  74.7% {
+	  top: 13%;
+	  left: 90%;
+  }
+  79% {
+	  top: 1%;
+	  left: 70%;
+  }
+  91.3% {
+  	top: 22%;
+  	left: 8%;
+  }
+  100% {
+	  top: 34%;
+	  left: 52%;
+  }
+}
+
+@keyframes field-ping {
+  0% {
+	  top: 10%;
+  }
+  5% {
+	  top: 10%;
+  }
+  9% {
+	  top: 24%;
+  }
+  13% {
+	  top: 17%;
+  }
+  24.9% {
+	  top: 82%;
+  }
+  47% {
+	  top: 37%;
+  }
+  52% {
+	  top: 41%;
+  }
+  56% {
+	  top: 64%;
+  }
+  58.1% {
+	  top: 54%;
+  }
+  70% {
+	  top: 74%;
+  }
+  84% {
+	  top: 12%;
+  }
+  91.3% {
+	  top: 18%;
+  }
+  100% {
+	  top: 10%;
+  }
+}
+
+@keyframes field-pong {
+  0% {
+	  top: 90%;
+  }
+  8.3% {
+	  top: 51%;
+  }
+  20% {
+	  top: 60%;
+  }
+  25% {
+	  top: 34%;
+  }
+  41.5% {
+	  top: 68%;
+  }
+  46% {
+	  top: 36%;
+  }
+  52% {
+	  top: 18%;
+  }
+  58.1% {
+	  top: 53%;
+  }
+  66% {
+	  top: 14%;
+  }
+  70% {
+	  top: 20%;
+  }
+  74.7% {
+	  top: 10%;
+  }
+  91.3% {
+	  top: 10%;
+  }
+  100% {
+	  top: 90%;
+  }
+}
+
+/* ----------------- SETTINGS PAGE ----------------- */
+#settings-central-left-div {
+  align-items: row;
+  text-align: center;
+  border-top: 3px dashed white;
+  border-bottom: 3px dashed white;
+  border-left: 3px dashed white;
+  height: 100%;
+  width: 450px;
+  max-width: 500px;
+  min-width: 400px;
+}
+
+#settings-central-left-top-div {
+  border-bottom: 3px dashed white;
+}
+
+#settings-central-right-div {
+  border: 3px dashed white;
+  height: 100%;
+  width: 450px;
+  max-width: 500px;
+  min-width: 400px;
+  color: white;
+}
+
+#settings-profile-picture {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin-top: 40px;
+}
+
+.settings-buton {
+	height: 40px;
+	width: 200px;
+	margin-top:15px;
+	margin-bottom: 20px;
+	background-color: #FF853B;
+	color: #020B13;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+  display: block;
+}
+
+.settings-label-input-field {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settings-default-text {
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+#settings-subtitle-modify,#settings-subtitle-confirm, #settings-subtitle-modify-fa {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+
+#settings-modify-div {
+  border-bottom: 3px dashed white;
+  padding-bottom: 32px;
+}
+
+#settings-2fa {
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  padding:25px;
+}
+
+/* ----------------- GAME-SCORE PAGE ----------------- */
+#game-score-div {
+  padding: 100px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.game-score-result-text {
+  color: #FF853B;
+  font-size: 36px;
+}
+
+#game-score-game-result-text {
+  color: white;
+  font-size: 21px;
+  margin-top: 20px;
+}
+
+/* ----------------- WAITING-ROOM PAGE ----------------- */
+#waitingroom-form {
+  padding: 100px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#waitingroom-text {
+  color: #FF853B;
+}
+
+#waitingroom-cancel-button {
+  font-size: 20px;
+}
+
+/* ----------------- PROFILE PAGE ----------------- */
+#profile-main-div {
+  padding-top: 100px;
+}
+
+#profile-main-upper-div {
+  width: 1400px;
+}
+
+#profile-info-div {
+  min-width: 500px;
+}
+
+#profile-page-profile-picture-div {
+  height: 200px;
+  width: 200px;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+#profile-page-profile-picture {
+  height: 150px;
+  width: 150px;
+}
+
+#profile-username-text {
+  color: #FF853B;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.profile-default-button {
+	height: 40px;
+	width: 200px;
+	background-color: #FF853B;
+	color: #020B13;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#profile-main-lower-div {
+  display: inline-flex;
+  padding-top: 100px;
+}
+
+#profile-central-left-div {
+  align-items: row;
+  text-align: center;
+  border-top: 3px dashed white;
+  border-bottom: 3px dashed white;
+  border-left: 3px dashed white;
+  height: 400px;
+  width: 700px;
+  overflow: scroll;
+}
+
+.profile-default-text {
+  color: white;
+  font-size: 20px;
+}
+
+#profile-central-right-div {
+  text-align: center;
+  border: 3px dashed white;
+  height: 400px;
+  width: 700px;
+}

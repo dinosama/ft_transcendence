@@ -1,0 +1,12 @@
+Django==5.0.2
+psycopg==3.1.8
+djangorestframework
+markdown
+django-filter
+django-cors-headers
+requests
+djangorestframework-simplejwt
+pyjwt
+pyotp
+cryptography
+pycryptodome

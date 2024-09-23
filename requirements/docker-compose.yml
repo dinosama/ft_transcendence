@@ -1,0 +1,128 @@
+
+x-base: &defaults
+  hostname: ${HOST_NAME}
+  env_file:
+    - .env
+
+services:
+  postgres:
+    <<: *defaults
+    tty: true
+    container_name: postgres
+    image: 'postgres:16.1'
+    environment:
+      - POSTGRES_DB=${POSTGRESQL_DB}
+      - POSTGRES_USER=${POSTGRESQL_USER}
+      - POSTGRES_PASSWORD=${POSTGRESQL_PASSWORD}
+    ports:
+      - '0.0.0.0:9008:5432'
+    networks:
+      - transcendence
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "${POSTGRESQL_DB}", "-U", "${POSTGRESQL_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always
+  django:
+    <<: *defaults
+    tty: true
+    container_name: django
+    working_dir: ${WORKDIR_DJANGO}
+    command: sh -c "python manage.py makemigrations && 
+                    python manage.py migrate &&
+                    python manage.py createsuperuser --noinput &&
+                    python manage.py runserver 0.0.0.0:3000"
+    build:
+      context: ${DJANGO_DOCKER_CONTEXT}
+      dockerfile: Dockerfile
+      args:
+        DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME}
+        DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD}
+        DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL}
+        ROOT_PASS: ${ROOT_PASS}
+    volumes:
+      - ${DJANGO_DOCKER_CONTEXT}/srcs:${WORKDIR_DJANGO}
+      - ${PROFILE_PICTURE_PATH}:/app/profile-pictures
+    ports:
+      - '0.0.0.0:9009:3000'
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - transcendence
+    restart: always
+  frontend:
+    <<: *defaults
+    tty: true
+    image: node:21-bullseye
+    container_name: frontend
+    volumes:
+      - ${FRONT_DOCKER_CONTEXT}/app:${WORKDIR_FRONT}
+    working_dir: ${WORKDIR_FRONT}
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        npm run dev -- --host
+    depends_on:
+      - wsserver
+    ports:
+      - '0.0.0.0:9007:5173'
+    networks:
+      - transcendence
+    restart: always
+  wsserver:
+    <<: *defaults
+    tty: true
+    image: node:21-bullseye
+    container_name: wsserver
+    volumes:
+      - ${FRONT_DOCKER_CONTEXT}/app:${WORKDIR_FRONT}
+    working_dir: ${WORKDIR_FRONT}
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        node js/server.js
+    depends_on:
+      - gameserver
+    ports:
+      - "127.0.0.1:9010:9010"
+    networks:
+      - transcendence
+    restart: always
+  gameserver:
+    <<: *defaults
+    tty: true
+    image: node:21-bullseye
+    container_name: gameserver
+    volumes:
+      - ${FRONT_DOCKER_CONTEXT}/app:${WORKDIR_FRONT}
+    working_dir: ${WORKDIR_FRONT}
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        apt-get update
+        apt-get upgrade -y
+        apt-get install redis-server -y
+        redis-server --port 8815 --daemonize yes
+        node js/game-server.js
+    depends_on:
+      - django
+    ports:
+      - "127.0.0.1:9011:9011"
+    networks:
+      - transcendence
+    restart: always
+
+networks:
+  transcendence:
+    driver: bridge
+    name: transcendence
