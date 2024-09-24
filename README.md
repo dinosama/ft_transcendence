@@ -77,7 +77,9 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/dinosama/ft_transcendence)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `dinosama`, `ft_transcendence`, `dinosama654`, `aaron-apatout`, `apatoutaaron.apatout@gmail.com`, `apatoutaaron.apatout@gmail.com`, `ft_transcendence`, `onepage website multiplayer pong`
+This project is a website done with my team of 5 students at 42 Paris, we gived each other one main part of the project,
+mine was websocket communication (like invitation notifications in real time. see [websocket server implementation](https://github.com/dinosama/ft_transcendence/blob/main/requirements/front/app/js/server.js)). Also that the game can be playable online,
+resolving by creating our own game server using websocket connections (implemented using nodeJS [gameserver implementation](https://github.com/dinosama/ft_transcendence/blob/main/requirements/front/app/js/game-server.js)).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
