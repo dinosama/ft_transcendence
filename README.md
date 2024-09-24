@@ -147,8 +147,7 @@ Back
 Live Chat/Remote players 
 Score in blockchain
 Browser compatibility 
-Notifications (friends request, game invites, online status): websockets 
-Https
+Notifications (friends request, game invites, online status): websockets
 websocket server
 game server
 Tournament logic: 4 games - 8 joueurs, 3 étapes 
