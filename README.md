@@ -86,37 +86,33 @@ resolving by creating our own game server using websocket connections (implement
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This github contain the source files and what's necessary to run the website on your local machine,
+but you need before that to have docker and npm installed on your system.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+First of all install npm, nodejs and docker.
 * npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
+  [install npm and nodejs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* docker
+  [install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+  [install dockercompose](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
+  
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/dinosama/ft_transcendence.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
-   npm install
+   npm install requirements/front/app
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Run the Makefile and let docker build up the project
    ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin dinosama/ft_transcendence
-   git remote -v # confirm the changes
+   sudo make
    ```
+4. Wait until docker stop building up the containers then connect on your browser to http://localhost:9007/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,10 +120,11 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+[welcome screen](https://private-user-images.githubusercontent.com/42315874/370103086-c80039ff-2a70-4fad-b652-10d4948a0647.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjcxNDQxMjMsIm5iZiI6MTcyNzE0MzgyMywicGF0aCI6Ii80MjMxNTg3NC8zNzAxMDMwODYtYzgwMDM5ZmYtMmE3MC00ZmFkLWI2NTItMTBkNDk0OGEwNjQ3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTI0VDAyMTAyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM4NTNjNmIyMzIxYTBjOGYxNTQzMmRiNjg2NzEyYzVhNmMxODFjYWIwYWE2OTlmN2NhNTZlZjZkZDNkM2I0NTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.ahkQ5aQejmdlUVMACCJFOu-kD2hWPPjJlcFpRrLXXV8)
+[registration screen](https://private-user-images.githubusercontent.com/42315874/370103410-21090566-89b2-4bf2-8ef6-98fe6c8a51c6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjcxNDQyMjksIm5iZiI6MTcyNzE0MzkyOSwicGF0aCI6Ii80MjMxNTg3NC8zNzAxMDM0MTAtMjEwOTA1NjYtODliMi00YmYyLThlZjYtOThmZTZjOGE1MWM2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTI0VDAyMTIwOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU0YTFlNGZiMTgzN2E3NDBjMzVmYWNhOWNlYzFkZDA0YzNjNmE4OWJkMDQyOWM3OTA4MTk2MjNiMjhiM2RiZTImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.dw4nzi3J97kbjrJbUhpc6GJq9rTMeWQxglZM5CQCSug)
+[login screen](https://private-user-images.githubusercontent.com/42315874/370103644-631ae881-948b-4dcf-beca-936bc9205afe.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjcxNDQyOTQsIm5iZiI6MTcyNzE0Mzk5NCwicGF0aCI6Ii80MjMxNTg3NC8zNzAxMDM2NDQtNjMxYWU4ODEtOTQ4Yi00ZGNmLWJlY2EtOTM2YmM5MjA1YWZlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTI0VDAyMTMxNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVkMWVhYjNmYThmY2I4MzE5MjU2YjkxMzBiMjhkZWE2NGY4N2YxNTZmMDFkYTFkNjc3NDI5YzlhNjc2MDlmNWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.mBS7fVl5ck6Msu9TOVJYmFi922d5tFVQx17tENa6ocI)
+[dashboard](https://private-user-images.githubusercontent.com/42315874/370103775-153f258f-d03c-4e39-9be1-1df61d25e018.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjcxNDQzNDMsIm5iZiI6MTcyNzE0NDA0MywicGF0aCI6Ii80MjMxNTg3NC8zNzAxMDM3NzUtMTUzZjI1OGYtZDAzYy00ZTM5LTliZTEtMWRmNjFkMjVlMDE4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTI0VDAyMTQwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgwMDczZjQyZjdiOTY1MmZkNzdhODdlMTJmMjA5YTlhYjVkZmM4ODYwNjJmMTJhZWZjNjFhNWQ3YTc1MTJhOWQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.FNE2n4dhNUJY6zF9YG8VONITh8zCkVOEj4ASidoS318)
+[settings](https://private-user-images.githubusercontent.com/42315874/370103914-728b3905-f763-4367-89f8-b450a0f9702d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjcxNDQzODUsIm5iZiI6MTcyNzE0NDA4NSwicGF0aCI6Ii80MjMxNTg3NC8zNzAxMDM5MTQtNzI4YjM5MDUtZjc2My00MzY3LTg5ZjgtYjQ1MGEwZjk3MDJkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTI0VDAyMTQ0NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBjNWVkZTI0OGRhODA1M2ZkNGU2NjkwODRjZjVhMjVlNGZhZjUzYWIxZTBiZjI1OTNmNzgwYjM2MGJhZGMwZDYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.pzzbR6tFrxjSM2LK2ccG8kyh0rGwMxjUs_UXbXZj-Dw)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
