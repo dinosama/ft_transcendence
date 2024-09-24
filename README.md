@@ -133,30 +133,26 @@ First of all install npm, nodejs and docker.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+GENERAL - TO DO
 
-See the [open issues](https://github.com/dinosama/ft_transcendence/issues) for a full list of proposed features (and known issues).
+Front
+Game
+Dashboard
+Pre-game : 
+tournoi: (1) rentrer les noms de chaque joueur, (2) aperçu des matchs
+local: username vs username
+Language support 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Back
+Live Chat/Remote players 
+Score in blockchain
+Browser compatibility 
+Notifications (friends request, game invites, online status): websockets 
+Https
+websocket server
+game server
+Tournament logic: 4 games - 8 joueurs, 3 étapes 
 
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,20 +176,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@dinosama654](https://twitter.com/dinosama654) - apatoutaaron.apatout@gmail.com@apatoutaaron.apatout@gmail.com.com
+Aaron APATOUT - [@dinosama654](https://twitter.com/dinosama654) - apatoutaaron.apatout@gmail.com
 
 Project Link: [https://github.com/dinosama/ft_transcendence](https://github.com/dinosama/ft_transcendence)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
