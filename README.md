@@ -30,7 +30,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/dinosama/ft_transcendence](https://github.com/dinosama/ft_transcendence">
+  <a href="https://github.com/dinosama/ft_transcendence](https://private-user-images.githubusercontent.com/42315874/370107050-61fb33b9-c5ed-4afc-94a8-3ca9e21c27ee.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjcxNDU0MTgsIm5iZiI6MTcyNzE0NTExOCwicGF0aCI6Ii80MjMxNTg3NC8zNzAxMDcwNTAtNjFmYjMzYjktYzVlZC00YWZjLTk0YTgtM2NhOWUyMWMyN2VlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTI0VDAyMzE1OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFiZDNhZmU0ZWNmMzFiMWQwODYzNTA5YjA4YjdiMTM2YWE1NDg0NjZjZDY1MTQ3NzVlZmU0YjUxN2JjYTllYzImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.840N8I3i0A3G8NAe09u6ksQkgDjCH9ZtshzTE3XdqkY)">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
