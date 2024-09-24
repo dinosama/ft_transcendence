@@ -87,7 +87,7 @@ resolving by creating our own game server using websocket connections (implement
 
 ### Built With
 
-* [![Next][Next.js]][Nodejs-url]
+* [![Node][Node.js]][Nodejs-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
